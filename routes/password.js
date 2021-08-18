@@ -1,7 +1,8 @@
 const express  = require('express');
 const utils    = require('../utils');
 const router   = express.Router();
-const database = require('./db');
+const database = require('./db')
+
 
 router.post('/register', (request, response) => {
     if(!request.body || !request.body.username || !request.body.password || !request.body.name) {
