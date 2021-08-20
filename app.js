@@ -37,5 +37,6 @@ app.use('/webauthn', webuathnauth)
 const port = config.port || 3000;
 app.listen(port);
 console.log(`Started app on port ${port}`);
+console.log("amitosh");
 
 module.exports = app;
