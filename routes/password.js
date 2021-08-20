@@ -3,7 +3,7 @@ const utils    = require('../utils');
 const router   = express.Router();
 const database = require('./db')
 
-
+/*
 router.post('/register', (request, response) => {
     if(!request.body || !request.body.username || !request.body.password || !request.body.name) {
         response.json({
@@ -41,6 +41,7 @@ router.post('/register', (request, response) => {
         'status': 'ok'
     })
 })
+*/
 
 router.post('/login', (request, response) => {
     if(!request.body || !request.body.username || !request.body.password) {

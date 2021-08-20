@@ -50,6 +50,11 @@ let generateServerMakeCredRequest = (username, displayName, id) => {
         rp: {
             name: "FIDO Examples Corporation"
         },
+        authenticatorSelection : {
+            authenticatorAttachement:"platform",
+            userVerification:"preferred",
+            requireResidentKey:false
+        },
 
         user: {
             id: id,
@@ -57,11 +62,35 @@ let generateServerMakeCredRequest = (username, displayName, id) => {
             displayName: displayName
         },
 
-        attestation: 'direct',
+        attestation: 'none',
 
         pubKeyCredParams: [
             {
-                type: "public-key", alg: -7 // "ES256" IANA COSE Algorithms registry
+                type: "public-key", alg: -8 // "ES256" IANA COSE Algorithms registry
+            },
+            {
+                type: "public-key", alg: -35 // "ES256" IANA COSE Algorithms registry
+            },
+            {
+                type: "public-key", alg: -36// "ES256" IANA COSE Algorithms registry
+            },
+            {
+                type: "public-key", alg: -37// "ES256" IANA COSE Algorithms registry
+            },
+            {
+                type: "public-key", alg: -38 // "ES256" IANA COSE Algorithms registry
+            },
+            {
+                type: "public-key", alg: -39 // "ES256" IANA COSE Algorithms registry
+            },
+            {
+                type: "public-key", alg: -257 // "ES256" IANA COSE Algorithms registry
+            },
+            {
+                type: "public-key", alg: -258 // "ES256" IANA COSE Algorithms registry
+            },
+            {
+                type: "public-key", alg: -259 // "ES256" IANA COSE Algorithms registry
             }
         ]
     }
